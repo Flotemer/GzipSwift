@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .target(
             name: "Gzip",
-            dependencies: ["system-zlib"],
-            swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
+            dependencies: ["system-zlib"]//,
+            //swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
         ),
         .target(
             name: "system-zlib"
@@ -19,8 +19,8 @@ let package = Package(
         .testTarget(
             name: "GzipTests",
             dependencies: ["Gzip"],
-            resources: [.copy("test.txt.gz")],
-            swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
+            resources: [.copy("test.txt.gz")]//,
+            //swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
         ),
     ]
 )
